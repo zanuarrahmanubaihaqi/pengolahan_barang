@@ -75,6 +75,7 @@
               </div>
               <div class="row">
                 <div class="col">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal_lihat_barang" name="button_lihat_barang"><i class="fa fa-file" aria-hidden="true"></i> Cek Barang</button>
                   <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modal_barang" name="button_barang"><i class="fa fa-plus" aria-hidden="true"></i> Tambah Barang</button>
                   <button type="button" class="btn btn-danger" name="button_batal" onclick="refreshPage();"><i class="fa fa-times" aria-hidden="true"></i> Batal</button>
                 </div>
@@ -157,12 +158,33 @@
       </div>
     </div>
 
+    <div class="modal fade" id="modal_lihat_barang" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <!-- <form action=""> -->
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Data Barang</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              @include('order.barang')
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          <!-- </form> -->
+        </div>
+      </div>
+    </div>
+
     <div class="modal fade" id="modal_barang" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <!-- <form action=""> -->
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Tambah Obat</h5>
+              <h5 class="modal-title" id="exampleModalLabel">Tambah Barang</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -237,6 +259,12 @@
       responsive: true,
       sDom: 'r<"H"lf><"datatable-scroll"t><"F"ip>',
     });
+
+    $('#table_barang').DataTable({
+      responsive: true,
+      sDom: 'r<"H"lf><"datatable-scroll"t><"F"ip>',
+    });
+
     $('#temp_barang').val(1);
   });
 

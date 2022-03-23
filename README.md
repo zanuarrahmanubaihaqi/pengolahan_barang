@@ -25,8 +25,11 @@
 - Rename or copy `.env.example` file to `.env`
 - Jalankan `php artisan key:generate`
 - Set koneksi database pada file `.env`
+- Jalankan `php artisan migrate`
+- Jalankan `php artisan db:seed`
 
 
 ## Note
 
 Untuk menjalankan di environtment local jangan lupa jalankan `php artisan serve`
+Akun admin : username -> admin & password -> passw0rd

@@ -23,7 +23,7 @@ class OrderController extends Controller
     {
         $user = User::all();
         $order = Order::getOrderData();
-        $barang = Barang::all();
+        $barang = Barang::getDataBarang();
         $status = "";
     	return view('order.index', compact('order', 'barang', 'user'));
     }
