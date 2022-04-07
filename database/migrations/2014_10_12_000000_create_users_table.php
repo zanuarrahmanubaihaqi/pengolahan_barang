@@ -13,7 +13,7 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('user', function (Blueprint $table) {
+        Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name', 250);
             $table->string('email', 250);
@@ -21,8 +21,8 @@ class CreateUsersTable extends Migration
             $table->string('password', 250);
             $table->string('username', 250);
             $table->string('nik', 100);
-            $table->int('level', false, false, 11);
-            $table->int('dept_id', false, false, 11);
+            $table->integer('level', false, false, 11);
+            $table->integer('dept_id', false, false, 11);
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();

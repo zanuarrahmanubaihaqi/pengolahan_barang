@@ -13,6 +13,7 @@ class UsersSeeder extends Seeder
      */
     public function run()
     {
+        $faker = Faker::create('id_ID');
         $nik = $this->createNIK();
         User::create([
           'username' => 'admin',
@@ -43,7 +44,6 @@ class UsersSeeder extends Seeder
     }
 
     public function createNIK() {
-        $faker = Faker::create('id_ID');
         $rno = rand(700, 799);
         $rtgl = rand(1, 12);
         $rbln = rand(1, 12);

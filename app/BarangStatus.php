@@ -9,4 +9,5 @@ class BarangStatus extends Model
     protected $table = 'barang_status';
     protected $primaryKey = 'status_id';
     public $guarded = [];
+    public $timestamps = false;
 }

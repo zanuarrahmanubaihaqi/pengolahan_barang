@@ -51,7 +51,7 @@
                       @foreach ($lokasi as $data)
                         <tr>
                           <td>{{ $no }}</td>
-                          <td>{{ $data->lokasi_code }}</td>
+                          <td>{{ $data->lokasi_kode }}</td>
                           <td>{{ $data->lokasi_ket }}</td>
                           @if (auth()->user()->level == '1')
                             <td>
