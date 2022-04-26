@@ -1,4 +1,4 @@
-# Sistem Informasi Klinik
+# Sistem Informasi Pengelolaan Barang
 
 | Laravel Version | Branch |
 | --------------- | ------ |
